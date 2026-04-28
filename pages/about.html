@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Your Name</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Anti-flash: apply theme before render -->
+  <script>
+    (function(){
+      var m = localStorage.getItem('portfolio-color-mode');
+      if (!m) m = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-color-mode', m);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-noise"></div>
+    <div class="hero-grid-lines"></div>
+    <div class="container hero-inner">
+
+      <div class="hero-split">
+        <!-- LEFT: text -->
+        <div class="hero-text">
+          <div class="hero-tag"><span class="dot"></span> <span data-i18n="hero.available"></span></div>
+          <h1 class="hero-title">
+            Tahina <span class="accent">Johnson</span><br/>
+            <span class="hero-sub" data-i18n="hero.role"></span>
+          </h1>
+          <p class="hero-desc" data-i18n="hero.desc"></p>
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn--primary" data-i18n="hero.cta_projects"></a>
+            <a href="contact.html"  class="btn btn--ghost"   data-i18n="hero.cta_contact"></a>
+          </div>
+        </div>
+
+        <!-- RIGHT: photo -->
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-ring"></div>
+          <img
+            src="../assets/my-photo.png"
+            alt="Profile photo"
+            class="hero-photo"
+            onerror="this.style.display='none';this.parentElement.querySelector('.hero-photo-placeholder').style.display='flex';"
+          />
+        </div>
+      </div>
+
+    </div>
+    <div class="hero-scroll-hint">
+      <span data-i18n="hero.scroll"></span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <main class="page-main">
+    <div class="container">
+
+      <div class="page-header reveal">
+        <div class="page-header-meta">
+          <span class="section-index">01</span>
+          <span class="page-breadcrumb" data-i18n="about.breadcrumb"></span>
+        </div>
+        <h1 class="page-title" data-i18n="about.title"></h1>
+        <div class="page-title-line"></div>
+      </div>
+
+      <div class="about-body reveal">
+
+        <div class="about-bio">
+          <p class="about-greeting">
+            <span data-i18n="about.bio_intro"></span>
+            <strong class="accent"> ANDRIANJAKA Tahinjanahary Johnson</strong>.
+          </p>
+          <p class="about-text" data-i18n="about.bio_p1"></p>
+          <p class="about-text" data-i18n="about.bio_p2"></p>
+          <div class="about-actions">
+            <a href="../assets/cv.pdf" download class="btn btn--primary" data-i18n="about.download_cv"></a>
+            <a href="contact.html" class="btn btn--ghost" data-i18n="about.contact_me"></a>
+          </div>
+        </div>
+
+        <aside class="about-sidebar">
+          <div class="about-card">
+            <span class="about-card-icon">◎</span>
+            <div>
+              <p class="about-card-label" data-i18n="about.available_label"></p>
+              <p class="about-card-value accent" data-i18n="about.available_value"></p>
+            </div>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon">◈</span>
+            <div>
+              <p class="about-card-label">Location</p>
+              <p class="about-card-value" data-i18n="about.location"></p>
+            </div>
+          </div>
+          <div class="about-card">
+            <span class="about-card-icon">◇</span>
+            <div>
+              <p class="about-card-label" data-i18n="about.lang_label"></p>
+              <p class="about-card-value" data-i18n="about.lang_value"></p>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo"><span class="logo-bracket">[</span>TJ<span class="logo-bracket">]</span></span>
+      <span class="footer-copy" data-i18n="footer.copy"></span>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/nav.js"></script>
+  <script>injectNav('about');</script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Anti-flash: apply theme before render -->
+  <script>
+    (function(){
+      var m = localStorage.getItem('portfolio-color-mode');
+      if (!m) m = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-color-mode', m);
+    })();
+  </script>
+</head>
+<body data-theme="skills">
+
+  <main class="page-main">
+    <div class="container">
+
+      <!-- HEADER -->
+      <div class="page-header reveal" id="skPageHeader">
+        <div class="page-header-meta">
+          <span class="section-index">03</span>
+          <span class="page-breadcrumb" data-i18n="skills.breadcrumb"></span>
+        </div>
+        <h1 class="page-title" data-i18n="skills.title"></h1>
+        <div class="page-title-line"></div>
+      </div>
+
+      <!-- STICKY TAB BAR (sentinel anchors it) -->
+      <div class="sk-tabs-sentinel" id="skTabsSentinel"></div>
+      <div class="sk-tabs" id="skTabs" role="tablist" aria-label="Sections">
+        <button class="sk-tab" role="tab" data-target="section-skills"
+          data-i18n="skills.tab_skills" onclick="scrollToSection('section-skills')"></button>
+        <button class="sk-tab" role="tab" data-target="section-tech"
+          data-i18n="skills.tab_tech" onclick="scrollToSection('section-tech')"></button>
+        <button class="sk-tab" role="tab" data-target="section-achievements"
+          data-i18n="skills.tab_achievements" onclick="scrollToSection('section-achievements')"></button>
+        <div class="sk-tab-indicator" id="skTabIndicator"></div>
+      </div>
+
+      <!-- SECTION: Compétences -->
+      <section class="sk-section" id="section-skills">
+        <div class="sk-section-header">
+          <span class="sk-section-icon">⚡</span>
+          <h2 class="sk-section-title" data-i18n="skills.section_skills"></h2>
+        </div>
+        <div class="sk-grid" id="skillsGrid"></div>
+      </section>
+
+      <!-- SECTION: Technologies -->
+      <section class="sk-section" id="section-tech">
+        <div class="sk-section-header">
+          <span class="sk-section-icon">🛠️</span>
+          <h2 class="sk-section-title" data-i18n="skills.section_tech"></h2>
+        </div>
+        <div class="sk-grid sk-grid--tech" id="techGrid"></div>
+      </section>
+
+      <!-- SECTION: Achievements -->
+      <section class="sk-section" id="section-achievements">
+        <div class="sk-section-header">
+          <span class="sk-section-icon">🏆</span>
+          <h2 class="sk-section-title" data-i18n="skills.section_achievements"></h2>
+        </div>
+
+        <div class="ach-group">
+          <h3 class="ach-group-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/>
+            </svg>
+            <span data-i18n="skills.ach_certs"></span>
+          </h3>
+          <div class="ach-grid" id="achCerts"></div>
+        </div>
+
+        <div class="ach-group">
+          <h3 class="ach-group-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+            <span data-i18n="skills.ach_diplomas"></span>
+          </h3>
+          <div class="ach-grid" id="achDiplomas"></div>
+        </div>
+
+        <div class="ach-group">
+          <h3 class="ach-group-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            <span data-i18n="skills.ach_langs"></span>
+          </h3>
+          <div class="ach-grid" id="achLangs"></div>
+        </div>
+
+        <div class="ach-group">
+          <h3 class="ach-group-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+            </svg>
+            <span data-i18n="skills.ach_events"></span>
+          </h3>
+          <div class="ach-grid" id="achEvents"></div>
+
+      </section>
+
+    </div>
+  </main>
+
+  <!-- MODAL -->
+  <div class="ach-modal-backdrop" id="achModalBackdrop" onclick="closeModal()">
+    <div class="ach-modal" id="achModal" onclick="event.stopPropagation()">
+      <button class="ach-modal-close" onclick="closeModal()" aria-label="Fermer">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+      <div class="ach-modal-inner" id="achModalInner"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo"><span class="logo-bracket">[</span>TJ<span class="logo-bracket">]</span></span>
+      <span class="footer-copy" data-i18n="footer.copy"></span>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/skills.js"></script>
+  <script>
+    injectNav('skills');
+    renderSkills();
+    renderAchievements();
+    initSkillsTabs();
+  </script>
+</body>
+</html>

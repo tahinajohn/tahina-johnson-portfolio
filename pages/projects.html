@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Anti-flash: apply theme before render -->
+  <script>
+    (function(){
+      var m = localStorage.getItem('portfolio-color-mode');
+      if (!m) m = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-color-mode', m);
+    })();
+  </script>
+</head>
+<body data-theme="projects">
+
+  <main class="page-main">
+    <div class="container">
+
+      <!-- HEADER -->
+      <div class="page-header reveal">
+        <div class="page-header-meta">
+          <span class="section-index">04</span>
+          <span class="page-breadcrumb" data-i18n="projects.breadcrumb"></span>
+        </div>
+        <h1 class="page-title" data-i18n="projects.title"></h1>
+        <div class="page-title-line"></div>
+      </div>
+
+      <!-- PROJECTS LIST -->
+      <div class="proj-list" id="projectsList"></div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo"><span class="logo-bracket">[</span>TJ<span class="logo-bracket">]</span></span>
+      <span class="footer-copy" data-i18n="footer.copy"></span>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/projects.js"></script>
+  <script>
+    injectNav('projects');
+    renderProjects();
+  </script>
+</body>
+</html>

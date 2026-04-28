@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Anti-flash: apply theme before render -->
+  <script>
+    (function(){
+      var m = localStorage.getItem('portfolio-color-mode');
+      if (!m) m = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-color-mode', m);
+    })();
+  </script>
+</head>
+<body data-theme="experience">
+
+  <main class="page-main">
+    <div class="container">
+
+      <!-- HEADER -->
+      <div class="page-header reveal">
+        <div class="page-header-meta">
+          <span class="section-index">02</span>
+          <span class="page-breadcrumb" data-i18n="experience.breadcrumb"></span>
+        </div>
+        <h1 class="page-title">
+          <span class="exp-title-icon">💼</span>
+          <span data-i18n="experience.title"></span>
+        </h1>
+        <div class="page-title-line"></div>
+      </div>
+
+      <!-- TIMELINE -->
+      <div class="exp-timeline">
+
+        <!-- CARD 1 — text left, details right (Z-pattern odd) -->
+        <article class="exp-card exp-card--odd reveal">
+          <div class="exp-card-inner">
+
+            <!-- Left: title block -->
+            <div class="exp-main">
+              <div class="exp-badge" data-i18n="experience.job1.type"></div>
+              <h2 class="exp-role" data-i18n="experience.job1.role"></h2>
+              <div class="exp-company">
+                <span class="exp-company-name" data-i18n="experience.job1.company"></span>
+                <span class="exp-dot-sep">·</span>
+                <span class="exp-period" data-i18n="experience.job1.period"></span>
+              </div>
+              <!-- Illustrative image -->
+              <div class="exp-image-wrap">
+                <div class="exp-image-placeholder exp-image--code">
+                  <div class="code-lines">
+                    <span style="width:70%"></span><span style="width:50%"></span>
+                    <span style="width:85%"></span><span style="width:40%"></span>
+                    <span style="width:60%"></span><span style="width:75%"></span>
+                  </div>
+                  <div class="code-badge">Python API</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: bullet details -->
+            <aside class="exp-details">
+              <p class="exp-details-label" data-i18n="experience.highlights"></p>
+              <ul class="exp-bullets">
+                <li data-i18n="experience.job1.b1"></li>
+                <li data-i18n="experience.job1.b2"></li>
+                <li data-i18n="experience.job1.b3"></li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Python</span>
+                <span class="exp-tag">FastAPI</span>
+                <span class="exp-tag">PostgreSQL</span>
+              </div>
+            </aside>
+
+          </div>
+        </article>
+
+        <!-- Connector -->
+        <div class="exp-connector reveal">
+          <div class="exp-connector-line"></div>
+          <div class="exp-connector-dot"></div>
+          <div class="exp-connector-line"></div>
+        </div>
+
+        <!-- CARD 2 — details left, text right (Z-pattern even) -->
+        <article class="exp-card exp-card--even reveal">
+          <div class="exp-card-inner">
+
+            <!-- Left: bullet details -->
+            <aside class="exp-details">
+              <p class="exp-details-label" data-i18n="experience.highlights"></p>
+              <ul class="exp-bullets">
+                <li data-i18n="experience.job2.b1"></li>
+                <li data-i18n="experience.job2.b2"></li>
+                <li data-i18n="experience.job2.b3"></li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Rasa</span>
+                <span class="exp-tag">NLP</span>
+                <span class="exp-tag">Python</span>
+              </div>
+            </aside>
+
+            <!-- Right: title block -->
+            <div class="exp-main">
+              <div class="exp-badge exp-badge--intern" data-i18n="experience.job2.type"></div>
+              <h2 class="exp-role" data-i18n="experience.job2.role"></h2>
+              <div class="exp-company">
+                <span class="exp-company-name" data-i18n="experience.job2.company"></span>
+                <span class="exp-dot-sep">·</span>
+                <span class="exp-period" data-i18n="experience.job2.period"></span>
+              </div>
+              <!-- Illustrative image -->
+              <div class="exp-image-wrap">
+                <div class="exp-image-placeholder exp-image--ai">
+                  <div class="ai-nodes">
+                    <div class="ai-node" style="top:30%;left:15%"></div>
+                    <div class="ai-node" style="top:55%;left:50%"></div>
+                    <div class="ai-node" style="top:25%;left:75%"></div>
+                    <div class="ai-node ai-node--sm" style="top:70%;left:25%"></div>
+                    <div class="ai-node ai-node--sm" style="top:40%;left:85%"></div>
+                    <svg class="ai-edges" viewBox="0 0 100 100" preserveAspectRatio="none">
+                      <line x1="15" y1="30" x2="50" y2="55" stroke="rgba(60,196,255,0.25)" stroke-width="0.5"/>
+                      <line x1="50" y1="55" x2="75" y2="25" stroke="rgba(60,196,255,0.25)" stroke-width="0.5"/>
+                      <line x1="15" y1="30" x2="75" y2="25" stroke="rgba(60,196,255,0.15)" stroke-width="0.5"/>
+                      <line x1="25" y1="70" x2="50" y2="55" stroke="rgba(60,196,255,0.2)"  stroke-width="0.5"/>
+                      <line x1="85" y1="40" x2="75" y2="25" stroke="rgba(60,196,255,0.2)"  stroke-width="0.5"/>
+                    </svg>
+                  </div>
+                  <div class="code-badge code-badge--cyan">NLP · AI</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+      <!-- Connector -->
+        <div class="exp-connector reveal">
+          <div class="exp-connector-line"></div>
+          <div class="exp-connector-dot"></div>
+          <div class="exp-connector-line"></div>
+        </div>
+      </div><!-- /timeline -->
+      <!-- CARD 1 — text left, details right (Z-pattern odd) -->
+        <article class="exp-card exp-card--odd reveal">
+          <div class="exp-card-inner">
+
+            <!-- Left: title block -->
+            <div class="exp-main">
+              <div class="exp-badge" data-i18n="experience.job3.type"></div>
+              <h2 class="exp-role" data-i18n="experience.job3.role"></h2>
+              <div class="exp-company">
+                <span class="exp-company-name" data-i18n="experience.job3.company"></span>
+                <span class="exp-dot-sep">·</span>
+                <span class="exp-period" data-i18n="experience.job3.period"></span>
+              </div>
+              <!-- Illustrative image -->
+              <div class="exp-image-wrap">
+                <div class="exp-image-placeholder exp-image--code">
+                  <div class="code-lines">
+                    <span style="width:70%"></span><span style="width:50%"></span>
+                    <span style="width:85%"></span><span style="width:40%"></span>
+                    <span style="width:60%"></span><span style="width:75%"></span>
+                  </div>
+                  <div class="code-badge">Fultter Dart</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: bullet details -->
+            <aside class="exp-details">
+              <p class="exp-details-label" data-i18n="experience.highlights"></p>
+              <ul class="exp-bullets">
+                <li data-i18n="experience.job3.b1"></li>
+                <li data-i18n="experience.job3.b2"></li>
+                <li data-i18n="experience.job3.b3"></li>
+              </ul>
+              <div class="exp-tags">
+                <span class="exp-tag">Flutter</span>
+                <span class="exp-tag">GraphQL</span>
+              </div>
+            </aside>
+
+          </div>
+        </article>
+
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo"><span class="logo-bracket">[</span>TJ<span class="logo-bracket">]</span></span>
+      <span class="footer-copy" data-i18n="footer.copy"></span>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/nav.js"></script>
+  <script>injectNav('experience');</script>
+</body>
+</html>

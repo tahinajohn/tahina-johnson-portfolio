@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="refresh" content="0; url=pages/about.html" />
+  <title>Portfolio</title>
+  <!-- Anti-flash: apply theme before render -->
+  <script>
+    (function(){
+      var m = localStorage.getItem('portfolio-color-mode');
+      if (!m) m = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-color-mode', m);
+    })();
+  </script>
+</head>
+<body>
+  <script>window.location.replace('pages/about.html');</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research & Data — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <!-- Anti-flash: apply theme before render -->
+  <script>
+    (function(){
+      var m = localStorage.getItem('portfolio-color-mode');
+      if (!m) m = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-color-mode', m);
+    })();
+  </script>
+</head>
+<body data-theme="research">
+
+  <main class="page-main">
+    <div class="container">
+
+      <!-- HEADER -->
+      <div class="page-header reveal">
+        <div class="page-header-meta">
+          <span class="section-index">05</span>
+          <span class="page-breadcrumb" data-i18n="research.breadcrumb"></span>
+        </div>
+        <h1 class="page-title" data-i18n="research.title"></h1>
+        <div class="page-title-line"></div>
+        <p class="res-intro" data-i18n="research.intro"></p>
+      </div>
+
+      <!-- ASYMMETRIC TWO-COLUMN LAYOUT -->
+      <div class="res-layout reveal">
+
+        <!-- ══════════════ LEFT COLUMN ══════════════ -->
+        <div class="res-left">
+
+          <!-- Axes de recherche -->
+          <section class="res-block">
+            <h2 class="res-block-title" data-i18n="research.axes_title"></h2>
+            <ul class="res-axes" id="resAxes"></ul>
+          </section>
+
+          <!-- Projets de recherche -->
+          <section class="res-block">
+            <h2 class="res-block-title" data-i18n="research.projects_title"></h2>
+            <div class="res-projects" id="resProjects"></div>
+          </section>
+
+        </div>
+
+        <!-- ══════════════ RIGHT COLUMN ══════════════ -->
+        <div class="res-right">
+
+          <!-- Media block -->
+          <div class="res-media-card">
+            <h3 class="res-media-title" data-i18n="research.media_title"></h3>
+            <div class="res-media-img-wrap">
+              <img
+                src="../assets/speech.png"
+                alt="Deep Learning Indaba 2024 Sénégal"
+                class="res-media-img"
+                onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+              />
+              <div class="res-media-fallback">
+                <span>📸</span>
+                <p data-i18n="research.media_fallback"></p>
+              </div>
+              <p class="res-media-caption" data-i18n="research.media_caption"></p>
+            </div>
+          </div>
+
+          <!-- Engagements -->
+          <div class="res-engage-card">
+            <div class="res-engage-header">
+              <span class="res-engage-globe">🌍</span>
+              <h3 class="res-engage-title" data-i18n="research.engage_title"></h3>
+            </div>
+            <ul class="res-engage-list" id="resEngagements"></ul>
+          </div>
+
+        </div>
+
+      </div><!-- /res-layout -->
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo"><span class="logo-bracket">[</span>TJ<span class="logo-bracket">]</span></span>
+      <span class="footer-copy" data-i18n="footer.copy"></span>
+    </div>
+  </footer>
+
+  <script src="../js/i18n.js"></script>
+  <script src="../js/nav.js"></script>
+  <script src="../js/research.js"></script>
+  <script>
+    injectNav('research');
+    renderResearch();
+  </script>
+</body>
+</html>
