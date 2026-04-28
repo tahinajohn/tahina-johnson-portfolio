@@ -8,7 +8,7 @@ const PROJECTS_FR = [
     image: '../assets/rag.png',
     techs: ['NLP', 'RAG', 'Python'],
     github: '',
-    demo:''
+    demo:'https://tahina-johnson.vercel.app/pages/chat'
   },
   {
     emoji: '🔬',
