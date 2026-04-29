@@ -74,7 +74,7 @@ const PROJECTS_EN = [
     image: '../assets/rag.png',
     techs: ['NLP', 'RAG', 'Python'],
     github: '',
-    demo:   '',
+    demo:   'https://tahina-johnson.vercel.app/pages/chat',
   },
   {
     emoji: '🔬',
@@ -101,7 +101,7 @@ const PROJECTS_EN = [
     image: '../assets/diabete.jpg',
     techs: ['Python', 'Scikit-learn', 'Streamlit'],
     github: 'https://github.com/tahinajohn/diabetes-predictor',
-    demo:   'https://huggingface.co/spaces/ratah001/diabetes-prediction',
+    demo:   '',
   },
   {
     emoji: '📊',

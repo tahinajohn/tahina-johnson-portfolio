@@ -303,7 +303,7 @@ const TRANSLATIONS = {
       form_send:          'Send message',
       form_success:       'Ready! Your mail client will open shortly.',
     },
-    footer:     { copy: '© 2026 — Built with care' },
+    footer:     { copy: '© 2026 Tahina Johnson — All rights reserved' },
   },
 };
 
