@@ -80,8 +80,8 @@ const ACHIEVEMENTS = {
       cert_image: '../assets/certs/n8n.png',
     },
     {
-      id: 'cert_scraping',
-      icon: '🕷️',
+      id: 'cert_ai_agents',
+      icon: '🤖',
       color: '#a78bfa',
       title_fr: 'Introduction aux agents IA',
       title_en: 'Introduction to AI Agents',
