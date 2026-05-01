@@ -123,7 +123,7 @@ const TRANSLATIONS = {
       placeholder:  'Posez votre question...',
       send:         'Envoyer',
       thinking:     'En train de réfléchir...',
-      suggestions:  ["Quelles sont ses compétences ?", "Parle-moi de ses projets", "Est-il disponible ?", "Quel est son parcours ?"],
+      suggestions:  ["Quelles sont ses compétences ?", "Parle-moi de ses projets", "Est-il disponible ?", "Quel est son parcours academique ?"],
       ai_name:      'Assistant IA',
     },
     contact: {
@@ -276,7 +276,7 @@ const TRANSLATIONS = {
       placeholder:  'Ask me anything...',
       send:         'Send',
       thinking:     'Thinking...',
-      suggestions:  ["What are his skills?", "Tell me about his projects", "Is he available?", "What is his background?"],
+      suggestions:  ["What are his skills?", "Tell me about his projects", "Is he available?", "What is his academic background?"],
       ai_name:      'AI Assistant',
     },
     contact: {
